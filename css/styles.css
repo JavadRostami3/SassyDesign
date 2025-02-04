@@ -1,3 +1,201 @@
+@font-face {
+  font-family: "vazir";
+  src: url("../fonts/vazir/Vazir-FD-WOL.woff") format("woff2"), url("../fonts/vazir/Vazir-FD-WOL.woff") format("woff"), url("../fonts/vazir/Vazir-FD-WOL.ttf") format("truetype");
+}
+:root {
+  /* Adjusting hue and saturation */
+  --hue: 120;
+  /* Green */
+  --sat: 60%;
+  /* Higher saturation for a more vibrant color */
+  /* Primary color */
+  --primary-color: hsl(var(--hue), var(--sat), 45%);
+  --primary-color-light: hsl(var(--hue), var(--sat), 75%);
+  --primary-color-lighten: hsl(var(--hue), var(--sat), 70%);
+  /* Secondary color */
+  --secondary-color: hsl(var(--hue), 45%, 50%);
+  /* Title and text colors */
+  --title-color: hsl(var(--hue), 10%, 20%);
+  /* Dark color for titles */
+  --text-color: hsl(var(--hue), 10%, 40%);
+  /* Main text color */
+  --text-color-light: hsl(var(--hue), 10%, 60%);
+  /* Lighter text color for less important text */
+  /* Background and container colors */
+  --body-color: hsl(var(--hue), 0%, 98%);
+  /* Light background color */
+  --container-color: #f4f4f4;
+  /* Soft light color for container background */
+  --ff-primary: "vazir", sans-serif;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-primary);
+  background: var(--body-color);
+  line-height: 2;
+  font-size: 1rem;
+  text-align: right;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  line-height: 2;
+}
+
+p {
+  color: var(--text-color);
+  line-height: 2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .nav__list {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .nav__toggle {
+    display: none;
+  }
+}
+@media screen and (min-width: 929px) {
+  .container {
+    width: 95vw;
+  }
+  .button__header {
+    display: block !important;
+    padding: 0.5rem 1.5rem;
+  }
+}
+.container {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3rem;
+  transition: 0.5s;
+}
+.button:hover {
+  background: var(--container-color);
+  outline: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.button__header {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background: var(--body-color);
+  top: 0;
+  left: 0;
+  padding: 0.75rem 0;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.header .nav__toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .header .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    background: var(--container-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 2rem;
+    padding: 2.5rem 0;
+    transition: 0.4s;
+  }
+}
+.header .nav__list {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.header .nav__link, .header .nav__logo, .header .nav__toggle {
+  color: var(--title-color);
+}
+
+.show-menu {
+  top: 4rem !important;
+}
 
 /*# sourceMappingURL=styles.css.map */

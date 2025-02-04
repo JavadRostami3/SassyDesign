@@ -1,0 +1,42 @@
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .nav__list {
+      display: flex;
+      flex-direction: row !important;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .nav__toggle{
+        display: none;
+    }
+  }
+
+@media screen and (min-width:929px) {
+    .container{
+        width: 95vw;
+    }
+
+
+    .button__header {
+        display: block !important;
+        padding: 0.5rem 1.5rem;
+    }
+}
