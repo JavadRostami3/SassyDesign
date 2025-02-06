@@ -1,27 +1,28 @@
-.header{
+.header {
     position: fixed;
     width: 100%;
     background: var(--body-color);
     top: 0;
     left: 0;
     padding: 0.75rem 0;
+    transition: 0.5s;
 
-    .nav{
+    .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        &__logo{
-            font-size:1.5rem;
+        &__logo {
+            font-size: 1.5rem;
             font-weight: bold;
         }
 
-        &__toggle{
-            font-size:1.5rem;
+        &__toggle {
+            font-size: 1.5rem;
             cursor: pointer;
         }
 
-        &__menu{
+        &__menu {
             @media screen and (max-width: 767px) {
                 position: fixed;
                 // top: 4rem;
@@ -33,11 +34,12 @@
                 width: 90%;
                 margin: 0 auto;
                 border-radius: 2rem;
-                padding:2.5rem 0;
+                padding: 2.5rem 0;
                 transition: 0.4s;
             }
         }
-        &__list{
+
+        &__list {
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -52,6 +54,25 @@
     }
 }
 
+.active-link {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        bottom: -0.75rem;
+        left: 45%;
+        border-radius: 50%;
+        background: var(--title-color);
+    }
+}
+
 .show-menu {
     top: 4rem !important;
+}
+
+.scroll-header {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
