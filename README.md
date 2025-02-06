@@ -70,8 +70,8 @@ project-root/
 
 ### Key Directories:
 - **`scss/components/`**: Contains Sass components for each part of the website.
-- **`assets/css/`**: Compiled and minified CSS files.
-- **`assets/js/`**: JavaScript files for dynamic content and user interactions.
+- **`css/`**: Compiled and minified CSS files.
+- **`js/`**: JavaScript files for dynamic content and user interactions.
 
 ---
 
